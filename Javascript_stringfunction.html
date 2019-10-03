@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center">STRING METHODS</h1>
+    <h3>i am vijayaganapathy i am from   pondicherry</h3>
+    <div id="id1" style="height:150px; background: lightgreen; width: 300px"></div>
+    <button onclick="character()">Charater At-5</button>
+    <button onclick="Asciicode()">Ascii Code-36</button>
+    <button onclick="Conatstr()">Concat-07</button>
+    <button onclick="fromcharcode1()">From char code</button>
+    <button onclick="Indexof1()">Index of-vijayaganapathy</button>
+    <button onclick="lastindexof1()">Last index of-am</button>
+    <button onclick="localcompare1()">Local compare</button>
+    <button onclick="match1()">Match-am</button>
+    <button onclick="replace1()">Replace-vijayaganapathy=>vijay</button>
+    <button onclick="replasewithregex1()">Replace with regex-vijayaganapathy=>vijay</button>
+    <button onclick="search1()">Search-vijayaganapathy</button>
+    <button onclick="slice1()">Slice-2,4</button>
+    <button onclick="split1()">Split-am</button>
+    <button onclick="substring1()">Substring-2,4</button>
+    <button onclick="lowercase()">Tolowercase</button>
+    <button onclick="uppercase()">Touppercase</button>
+    <button onclick="trim1()">Trim</button>
+    <script>
+        var str="i am vijayaganapathy i am from   pondicherry"
+        var str1="i am vijayaganapathy i am from   pondicherry"
+        var pin="-07"
+        function character(){
+            document.getElementById("id1").innerHTML=str.charAt(5);
+        }
+        function Asciicode(){
+            document.getElementById("id1").innerHTML=str.charCodeAt(36);
+        }
+        function Conatstr(){
+            document.getElementById("id1").innerHTML=str.concat(pin);
+        }
+        function fromcharcode1(){
+            document.getElementById("id1").innerHTML=String.fromCharCode(74,65,86,65,83,67,82,73,80,84);
+        }
+        function Indexof1(){
+            document.getElementById("id1").innerHTML=str.indexOf("vijayaganapathy");
+        }
+        function lastindexof1(){
+            document.getElementById("id1").innerHTML=str.lastIndexOf("am");
+        }
+        function localcompare1(){
+            document.getElementById("id1").innerHTML=str.localeCompare(str1);//return 0
+        }
+        function match1(){
+            document.getElementById("id1").innerHTML=str.match(/am/g);
+        }
+        function replace1(){
+            document.getElementById("id1").innerHTML=str.replace("vijayaganapathy","vijay");
+        }
+        function replasewithregex1(){
+            document.getElementById("id1").innerHTML=str.replace(/vijayaganapathy/g,"vijay");
+        }
+        function search1(){
+            document.getElementById("id1").innerHTML=str.search("vijayaganapathy");//not found return -1
+        }
+        function slice1(){
+            document.getElementById("id1").innerHTML=str.slice(2,4);// return am
+        }
+        function split1(){
+            document.getElementById("id1").innerHTML=str.split("am");
+        }
+        function substring1(){
+            document.getElementById("id1").innerHTML=str.substring(2,4);//return am
+        }
+        function lowercase(){
+            document.getElementById("id1").innerHTML=str.toLowerCase();
+        }
+        function uppercase(){
+            document.getElementById("id1").innerHTML=str.toUpperCase();
+        }
+        function trim1(){
+            document.getElementById("id1").innerHTML=str.trim();//remove extra space
+        }
+    </script>
+</body>
+</html>
